@@ -1,0 +1,319 @@
+.pagination {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    color: #9eabb3;
+    text-align: center;
+}
+
+.pagination a {
+    color: #9eabb3;
+    transition: all .2s ease;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 2px 0;
+    min-width: 100px;
+}
+
+.newer-posts, .older-posts {
+    position: absolute;
+    display: inline-block;
+    padding: 0 15px;
+    border: #ddd 1px dashed;
+    text-decoration: none;
+    transition: border .3s ease;
+}
+
+.newer-posts {
+    left: 0;
+}
+
+.older-posts {
+    right: 0;
+}
+
+.site-footer {
+    padding-bottom: 20px !important;
+}
+
+.nav-current a:visited {
+    color: yellow;
+}
+
+@media (min-width: 900px) {
+    .ctsingle .post-feed {
+        margin-top: -70px;
+        padding-top: 0;
+    }
+    .ctsingle .site-nav {
+        position: relative;
+        top: -70px;
+    }
+}
+
+@media (min-width: 795px) {
+    .ctsingle .post-feed p {
+        font-size: 1.8rem;
+        line-height: 1.55em;
+    }
+}
+
+@media (max-width: 650px) {
+    .hide {
+        display: none !important;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
+
+.post-full-content pre code {
+    color: #e5eff5;
+}
+
+#top {
+  top: -100px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.email {
+  color: #fff;
+  margin:10px;
+  opacity: .8;
+}
+
+.facebook {
+  color: #fff;
+  margin:10px;
+  opacity: .8;
+}
+
+.twitter {
+  color: #fff;
+  margin:10px;
+  opacity: .8;
+}
+
+.email:hover {
+  color: #fff;
+  margin:10px;
+  opacity: 1;
+}
+
+.facebook:hover {
+  color: #fff;
+  margin:10px;
+  opacity: 1;
+}
+
+.twitter:hover {
+  color: #fff;
+  margin:10px;
+  opacity: 1;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 25px;
+
+}
+
+#mail-button {
+  text-align: center;
+  margin-top: 35px;
+}
+
+#termin-btn {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+#contact {
+  background-color: rgba(229, 239, 245, 0.7);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+@media (max-width: 479px) {
+  .form-control {
+    font-size: 1.6em;
+  }
+}
+
+#map2:hover {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mail:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#termin:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#GoTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 399;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(153, 153, 153, 0.8);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.team-member {
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 10px 70px;
+  min-height: 300px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow:8px 14px 38px rgba(39,44,49,.06),1px 3px 8px rgba(39,44,49,.03);
+
+}
+
+#teamtext {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#link a {
+  color: #4286f4;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: 15px;
+  list-style: none;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .list-inline {
+    padding-left: 0;
+    margin-left: -10px;
+    list-style: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .list-inline {
+    padding-left: 0;
+    margin-left: -50px;
+    list-style: none;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  .list-inline {
+    padding-left: 0;
+    margin-left: -80px;
+    list-style: none;
+  }
+}
+
+
+
+.team-member ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 75px;
+}
+
+ul.social-buttons {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+@media (max-width: 650px){
+  .team-member {
+      margin: 0 -1px 5vw;
+    }
+  }
+
+#hintergrund {
+      position: relative;
+      padding-top: 110px;
+      padding-bottom: 10px;
+      color: #fff;
+      background: #090a0b no-repeat 50%;
+      background-size: cover;
+  }
+
+#conlinks {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 340px){
+  #conlinks {
+    font-size: 0.85em;
+  }
+}
+
+#adresse {
+  height: 90px;
+}
+
+#beschreibung {
+    -ms-flex: 1 1 300px;
+    flex: 1 1 300px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 1px 60px;
+    margin-top: 60px;
+    min-height: 300px;
+    background: #fff;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
+    display: flex;
+    width: 100%;
+}
+
+.navbar {
+  top: -50px;
+}
+
+img[alt = Firmengebäude] {
+  width: 960px;
+}

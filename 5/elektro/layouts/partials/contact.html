@@ -1,0 +1,56 @@
+{{ "<!-- Contact Section -->" | safeHTML }}
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+
+        {{ with .Site.Params.contact.title }}
+        <h2 class="section-heading">{{ . | markdownify }}</h2>
+        {{ end }}
+
+        {{ with .Site.Params.contact.subtitle }}
+        <h3 class="section-subheading text-muted">{{ . | markdownify }}</h3>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6" id="conlinks">
+          <small class="form-control">{{ with .Site.Params.contact.Firmenname }}{{ . }}{{ end }}</small>
+          <h4>Adresse:</h4>
+          <small class="form-control" id="adresse">{{ with .Site.Params.contact.Str }}{{ . }}{{ end }}, {{ with .Site.Params.contact.Hausnummer }}{{ . }}{{ end }}<br>{{ with .Site.Params.contact.PLZ }}{{ . }}{{ end }}, {{ with .Site.Params.contact.Ort }}{{ . }}{{ end }}</small>
+          <h4>E-Mail:</h4>
+          <small class="form-control">{{ with .Site.Params.contact.Email }}{{ . }}{{ end }}</small>
+          <h4>Öffnungszeiten:</h4>
+          <small class="form-control">{{ with .Site.Params.contact.Öffnungszeiten }}{{ . }}{{ end }}</small>
+          <h4>Telefon:</h4>
+          <small class="form-control">{{ with .Site.Params.contact.Telefon }}{{ . }}{{ end }}</small>
+      </div>
+      <div class="col-md-6" id = "map">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d80582.3082847606!2d8.002917051866104!3d50.8645501029334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1519303729325" id="map2" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+   </div>
+  </div>
+{{ with .Site.Params.email }}
+   <div class="container">
+    <div class="row">
+      <div class="col-md text-center" id="mail-button">
+        <a href="mailto:{{ . }}" class="btn-lg btn-primary" id="mail">Schreiben Sie uns</a>
+      </div>
+    </div>
+   </div>
+{{ end }}
+
+   <div class="container">
+     <div class="row">
+       <div class="col-md text-center" id="termin-btn">
+         <a class="btn-lg btn-primary" id="termin" img id="scheduling-18815536" src="//app.agendize.de/web/img/scheduling_de.gif" onclick="openScheduling(18815536)" style="cursor:pointer;border:0"><script type="text/javascript">var scheduling = {server:'app.agendize.com',button:'112928404',lang:'de'};</script><script type="text/javascript"src="https://app.agendize.com/web/scheduling.js"></script>Termin vereinbaren</a>
+       </div>
+     </div>
+   </div class="container">
+
+</section>

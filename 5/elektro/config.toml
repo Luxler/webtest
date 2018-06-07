@@ -1,0 +1,129 @@
+baseurl         = "/"
+theme           = "casper-two"
+languageCode    = "de-de"
+disqusShortname = ""
+paginate        = 6
+#SectionPagesMenu = "main"
+
+[params]
+  title       = ""
+  subtitle    = ""
+
+  cover       = "blog-cover.jpg"
+  description = "Here is a description of your site."
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
+
+  datenschutz = "datenschutz"
+  termin = "Termin vereinbaren"
+  twitterName = "ExampleTwitter"
+  fbName = "ExampleFacebook"
+  email = "example@example.com"
+  orgName = "elektro"
+  copyright = "©"
+  logo = ""
+
+  authorDescription = "Describe yourself.."
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  showSupport = true
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+
+[params.contact]
+ title = "Kontakt"
+ Firmenname = "Elektrotechnik Lichter"
+ Telefon = "0271/12345"
+ Str = "Lichterstraße"
+ Hausnummer = "12"
+ PLZ = "12345"
+ Ort = "Lichterstadt"
+ Email = "lichter@test.de"
+ Öffnungszeiten = "montags-freitags 7-19 Uhr"
+
+
+[permalinks]
+  post = "/:slug/"
+
+[navigation.home]
+ enable = true
+ name = "Home"
+ url = "/"
+
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "Über uns"
+  url = "/#ueber"
+  weight = 111
+
+[[menu.main]]
+  name = "Team"
+  url ="/#ueberuns"
+  weight = 110
+
+[[menu.main]]
+  name = "Kontakt"
+  url = "/#contact"
+  weight = 100
+
+  # ueber
+  [params.ueber]
+   enable = true
+   center = true
+   title = "Über uns"
+   subtitle = " "
+   description = " "
+
+  # Team
+  [params.team]
+    enable = true
+    center = true
+    title = "Unser Team"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+
+    # Bilder des Teams liegen unter: 'static/img/team'.
+    # Im Optimalfall sollte das Bild mindestens 360px*360px groß sein.
+    [[params.team.members]]
+      img = "Lichter.jpeg"
+      name = "Malte Lichter"
+      position = "Meister für Elektrotechnik"
+      # For bio markdown and even multiline strings are available.
+      bio = """"""
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+    [[params.team.members]]
+      img = "Lichter alt.jpeg"
+      name = "Jürgen Lichter"
+      position = "Elektroanlagenmonteur"
+      bio = """"""
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+    [[params.team.members]]
+      img = "Schmidt.jpeg"
+      name = "Maximilian Schmidt"
+      position = "Elektroniker"
+      bio = """"""
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+        ]

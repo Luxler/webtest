@@ -1,0 +1,55 @@
+{{ "<!-- Team Section -->" | safeHTML }}
+<section id="ueberuns">
+  <div class="container">
+    {{ range (where .Data.Pages "Type" "info") }}
+        <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{{ .Title }}</h2>
+        <h3 class="section-heading">{{ .Content }}</h3>
+      </div>
+    </div>
+    {{ end }}
+    <div class="row flexbox{{ if .Site.Params.team.center }} flexbox-center{{ end }}">
+      {{ range .Site.Params.team.members }}
+        <div class="col-sm-4 col">
+          <div class="team-member">
+            {{ $url := printf "img/team/%s" .img }}
+            <img src="{{ $url | absURL }}" class="img-responsive" alt="{{ .name }}">
+            <h3 id="teamtext">{{ .name | markdownify }}</h3>
+
+            {{ with .position }}
+            <h4 id="teamtext">{{ . | markdownify }}</h4>
+            {{ end }}
+            {{ with .reportsTo }}
+            <h5 class="report" id="teamtext">Reports to {{ . | markdownify }}</h5>
+            {{ end }}
+
+            {{ with .livesIn }}
+            <h5 id="teamtext">Lives in {{ . | markdownify }}</h5>
+            {{ end }}
+
+            {{ with .scope }}
+            <ul>
+              {{ range . }}
+                <li>{{ . | markdownify }}</li>
+              {{ end }}
+            </ul>
+            {{ end }}
+
+
+            {{ with .bio }}
+            <p class="team-bio" id="teamtext">{{ . | markdownify }}</p>
+            {{ end }}
+
+            <ul class="list-inline social-buttons" id="link">
+              {{ range .social }}
+                <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a></li>
+              {{ end }}
+            </ul>
+
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

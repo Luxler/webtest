@@ -1,0 +1,74 @@
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">{{ if .Site.Params.logo }}
+        <a class="site-nav-logo" href="/"><img src="{{ .Site.Params.logo  | absURL}}" alt="{{ .Site.Params.Title }}" /></a>{{end}}
+
+        <ul class="nav" role="menu">
+        {{ $currentNode := . }}
+        {{with .Site.Menus.main}}
+        {{ range sort . "Weight" "desc"}}
+            <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}nav-current{{end}}" role="menuitem">
+              <a href="{{.URL}}">{{.Name}}</a>
+            </li>
+        {{end}}{{end}}
+        <div class="dropdown">
+          <button class="dropbtn">Leistungen
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/elektroinstallation">Elektroinstallation</a>
+            <a href="/beleuchtungstechnik">Beleuchtungstechnik</a>
+            <a href="/einbruchschutz">Einbruchschutz</a>
+            <a href="elektroprüfung">Elektroprüfung</a>
+          </div>
+        </div>
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+
+          <a class="page-scroll" img id="scheduling-18815536" src="//app.agendize.de/web/img/scheduling_de.gif" onclick="openScheduling(18815536)" style="cursor:pointer;border:0"><script type="text/javascript">var scheduling = {server:'app.agendize.com',button:'112928404',lang:'de'};</script><script type="text/javascript"src="https://app.agendize.com/web/scheduling.js"></script></a>
+            <i class="fa fa-calendar fa-2x"></i>
+          </a>
+
+          {{ with .Site.Params.fbName }}
+          <a href="https://facebook.com/{{ . }}" data-animate-hover="pulse" class="facebook">
+            <i class="fa fa-facebook fa-2x"></i>
+          </a>
+          {{end}}
+
+          {{ with .Site.Params.twitterName }}
+            <a href="https://twitter.com/{{ . }}" data-animate-hover="pulse" class="twitter">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+          {{end}}
+
+          {{ with .Site.Params.email }}
+          <a href="mailto:{{ . }}" data-animate-hover="pulse" class="email">
+            <i class="fa fa-envelope fa-2x"></i>
+          </a>
+          {{end}}
+
+        </div>
+        {{ if .Site.Params.RSSLink}}
+        <a class="subscribe-button" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
+        {{else if .Site.Params.showSubscribe}}
+        <a class="subscribe-button" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{"index.xml" | absURL}}{{end}}">Subscribe</a>
+        {{end}}
+      </div>
+
+    </nav>
+
+    <div class="site-header-content">
+        <h1 class="site-title">{{.Title | title}}</h1>
+
+        <h2 class="site-description">&#x2F;&nbsp;
+          {{ $data := .Data }}
+          {{ range $key, $value := .Data.Terms.Alphabetical }}
+          <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> ({{ $value.Count }})&nbsp;&#x2F;&nbsp;
+          {{ end }}
+        </h2>
+    </div>
+  </div>
+</header>

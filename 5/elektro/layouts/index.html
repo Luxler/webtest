@@ -1,0 +1,25 @@
+{{ partial "head" . }}
+
+<body class="home-template"><div class="site-wrapper">
+
+  <button onclick="topFunction()" id="GoTopBtn" title="Nach oben">
+   <i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>
+  </button>
+
+{{ partial "header" . }}
+
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    <div class="post-feed">
+      {{ partial "post-list" . }}
+    </div>
+
+  </div>
+
+</main>
+{{ partial "ueber" . }}
+{{ partial "ueberuns" . }}
+  {{ partial "contact" . }}
+{{ partial "footer" . }}
+</div>{{ partial "js" . }}</body></html>
